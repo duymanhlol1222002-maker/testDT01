@@ -73,8 +73,8 @@ def test_cau1(output, odd_count, total):
 
 def test_cau2(output, uppercase_count, palindrome, digit_sum):
     text = compact(output)
-    count_ok = f"sokytuchuhoa:{uppercase_count}" in text
-    sum_ok = f"tongcacchusotrongchuoi:{digit_sum}" in text
+    count_ok = f"sokytuchuhoa{uppercase_count}" in text
+    sum_ok = f"tongcacchusotrongchuoi{digit_sum}" in text
     if palindrome:
         palindrome_ok = "chuoidoxung." in text
     else:
@@ -112,7 +112,7 @@ TESTS = [
         "file": "cau1.py",
         "cases": [
             ("135\n", lambda out: test_cau1(out, 2, sum(1 / (2 * i) for i in range(1, 136))), "n = 135"),
-            ("2468\n", lambda out: test_cau1(out, 0, sum(1 / (2 * i) for i in range(1, 2469))), "n = 2468 (ngoai gioi han, khong dung test nay)"),
+            ("24\n", lambda out: test_cau1(out, 0, sum(1 / (2 * i) for i in range(1, 25))), "n = 24"),
         ],
     },
     {
